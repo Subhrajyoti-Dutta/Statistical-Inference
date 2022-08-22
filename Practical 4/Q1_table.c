@@ -30,8 +30,8 @@ double MSE_expo(int numOfSample, int sampleSize, double theta) {
 int main() {
 	srand(time(NULL));
 	int i, j, numOfSamples = 1000;
-	int sampleSize[] = { 10,25, 50,75,100 };
-	double theta[] = { 0.3, 0.5, 1.0, 1.5, 2.0 , 5.0 };
+	int sampleSize[] = { 10,25, 50, 75, 100 };
+	double theta[] = { 0.3, 0.5, 1.0, 1.5, 2.0, 5.0 };
 	int sampleSizeLen = 5, thetaLen = 6;
 
 	printf("    ");

@@ -20,7 +20,7 @@ int main() {
 	scanf("%lf", &theta);
 
 
-	double sum, mean, theta_cap, MSE;
+	double sum, mean, theta_cap, MSE = 0;
 	for (int n = 0; n < numOfSample; n++) {
 		sum = 0;
 		for (int i = 0; i < sampleSize; i++) {
