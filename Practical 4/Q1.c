@@ -12,6 +12,7 @@ double genExpo(double lambda) {
 }
 
 int main() {
+	srand(time(NULL));
 	int numOfSample = 1000, sampleSize;
 	double theta;
 	printf("Input the size of samples: ");
@@ -32,13 +33,13 @@ int main() {
 	}
 	MSE /= numOfSample;
 
-	printf("For theta = %lf and %d samples, the MSE is %lf\n", theta, numOfSample, MSE);
+	printf("For theta = %lf and sample size = %d, the MSE is %lf\n", theta, sampleSize, MSE);
 	return 0;
 }
 
 /*
 Output:
-		Input the number of samples: 10
+		Input the size of samples: 10
 		Input the value of theta: 0.5
-		For theta = 0.500000 and 10 samples, the MSE is 0.000338
+		For theta = 0.500000 and sample size = 10, the MSE is 0.046853
 */

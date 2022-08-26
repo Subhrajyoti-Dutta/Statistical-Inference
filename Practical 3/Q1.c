@@ -19,10 +19,12 @@ double genExpo(double lambda) {
 int main() {
 	srand(time(NULL));
 	int sampleSize;
+	double lambda, t, sum = 0, ss = 0, mean, var, skew, kurt;
+	double m1, m2, m3, m4, m1p, m2p, m3p, m4p;
 	printf("Enter sample size: ");
 	scanf("%d", &sampleSize);
-	double lambda = 0.2, t, sum = 0, ss = 0, mean, var, skew, kurt;
-	double m1, m2, m3, m4, m1p, m2p, m3p, m4p;
+	printf("Enter the value of lambda: ");
+	scanf("%lf", &lambda);
 	for (int i = 0; i < sampleSize; i++) {
 		t = genExpo(lambda);
 		m1p += t;
@@ -39,6 +41,7 @@ int main() {
 	var = m2;
 	skew = m3 / pow(m2, 1.5);
 	kurt = m4 / pow(m2, 2);
+	printf("For a sample size of %d of Exponential(%lf):-\n", sampleSize, lambda);
 	printf("mean = %lf\n", mean);
 	printf("var  = %lf\n", var);
 	printf("skew = %lf\n", skew);
@@ -48,8 +51,11 @@ int main() {
 
 /*
 Output:
-		mean = 5.011575
-		var  = 25.493378
-		skew = 2.047891
-		kurt = 9.324445
+		Enter sample size: 1000
+		Enter the value of lambda: 0.2
+		For a sample size of 1000 of Exponential(0.200000):-
+		mean = 4.942567
+		var  = 24.290346
+		skew = 2.175214
+		kurt = 10.717163
 */
